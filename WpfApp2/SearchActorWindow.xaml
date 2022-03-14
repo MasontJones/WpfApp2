@@ -1,0 +1,21 @@
+﻿<Window x:Class="RecordDatabase.SearchActorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecordDatabase"
+        mc:Ignorable="d"
+        Title="SearchActorWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="First Name" Margin="90,48,637,352"/>
+        <TextBox x:Name="FirstNameSearch" Margin="168,48,480,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="34"/>
+        <TextBox x:Name="LastNameSearch" Margin="466,49,161,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="34"/>
+        <Label Content="Search for actor by first and/or last Name" Margin="244,10,302,386"/>
+        <Label Content="Last Name" Margin="382,49,302,353"/>
+        <Button x:Name ="SearchButton" Content="Search" Margin="0,83,0,310"/>
+        <ListBox Margin="0,124,0,58"/>
+        <Button x:Name="EditButton" Content="Edit" Margin="0,376,400,0"/>
+        <Button x:Name="DeleteButton" Content="Delete" Margin="400,376,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="RecordDatabase.AddActorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecordDatabase"
+        mc:Ignorable="d"
+        Title="AddActorWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Label Content="FirstName" Margin="88,65,648,277"/>
+        <Label Content="LastName" Margin="88,130,648,214"/>
+        <Label Content="Enter actor's information, then click Submit to save." Margin="196,10,80,325"/>
+        <TextBox x:Name ="FirstNameTextbox" Margin="177,65,61,0" Text=""  VerticalAlignment="Top" Width="562" Height="40"/>
+        <TextBox x:Name ="LastNameTextbox" Margin="177,123,61,0" Text="" VerticalAlignment="Top" Width="562" Height="41"/>
+        <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="75,256,0,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="AddActorCalender" Margin="207,182,312,0" VerticalAlignment="Top" Height="173" Width="281"/>
+        <Button x:Name ="AddActorButton" Content="Submit" Margin="0,369,0,0" Grid.RowSpan="2" Click="AddActorButton_Click"/>
+    </Grid>
+</Window>

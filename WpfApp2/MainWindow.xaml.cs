@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace WpfApp2
+namespace RecordDatabase
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,9 +28,13 @@ namespace WpfApp2
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Add_Actor_Button_Click(object sender, RoutedEventArgs e)
         {
-            var dbCon = DBConnection.Instance();
+            AddActorWindow addActorWindow = new AddActorWindow();
+            this.Visibility = Visibility.Collapsed;
+            addActorWindow.ShowDialog();
+            this.Visibility = Visibility.Visible;
+            /* var dbCon = DBConnection.Instance();
             dbCon.Server = "209.106.201.103";
             dbCon.databaseName = "group3";
             dbCon.UserName = "dbstudent6";
@@ -50,13 +54,18 @@ namespace WpfApp2
                     string birthDate = reader.GetString(3);
                     MessageBox.Show(actorID + "," + firstName + "," + lastName + "," + birthDate);
                 }
-                dbCon.Close();
+                dbCon.Close();*/
             }
-        }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Search_Actor_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            SearchActorWindow searchActorWindow = new SearchActorWindow();
+            this.Visibility = Visibility.Collapsed;
+            searchActorWindow.ShowDialog();
+            this.Visibility = Visibility.Visible;
         }
     }
+
+ 
+    
 }
